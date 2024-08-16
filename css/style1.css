@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root{
@@ -8,7 +15,8 @@
 }
 
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0;
     margin: 0;
     outline: 0;
@@ -54,15 +62,23 @@ h1, h2, h3{
     color: var(--dark-color);
 }
 .flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .py-7{
     padding: 7rem 0;
 }
 .grid{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
 }
@@ -76,11 +92,17 @@ h1, h2, h3{
 
 /* header */
 #header{
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.3))), url('../images/cover1.jpeg') no-repeat fixed;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/cover1.jpeg') no-repeat fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/cover1.jpeg') no-repeat fixed;
     background-position: center;
     background-size: cover;
-    justify-content: flex-start;
-    align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 #header .container{
     width: 100%;
@@ -102,6 +124,8 @@ h1, h2, h3{
     margin-top: 1.5rem;
 }
 .social-links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 3.5rem;
 }
@@ -111,7 +135,10 @@ h1, h2, h3{
     background-color: var(--light-color);
     margin-right: 1rem;
     border-radius: .3rem;
-    box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 .social-links li a:hover{
@@ -126,18 +153,23 @@ h1, h2, h3{
 }
 
 .about-img{
-    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
 }
 /* button down and title -reusable */
 .btn-down{
     font-size: 3rem;
     display: inline-block;
     margin-top: 1rem;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 .btn-down:hover{
     opacity: 0.8;
-    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+            transform: translateY(5px);
 }
 .btn-down-white{
     color: var(--light-color);
@@ -163,6 +195,8 @@ h1, h2, h3{
 
 /* work */
 #work{
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.3))), url('../images/cover2.jpeg') no-repeat fixed;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/cover2.jpeg') no-repeat fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/cover2.jpeg') no-repeat fixed;
     background-size: cover;
     color: var(--light-color);
@@ -183,21 +217,32 @@ h1, h2, h3{
 }
 /* portfolio */
 .portfolio-grid > div{
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
+    -webkit-transition: all 1.3s;
+    -o-transition: all 1.3s;
     transition: all 1.3s;
 }
 .portfolio-grid > div:hover{
-    transform: scale(0.9);
-    filter: grayscale(0);
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
 }
 
 .portfolio-grid img{
-    filter: grayscale();
+    -webkit-filter: grayscale();
+            filter: grayscale();
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
     transition: all 1.5s;
 }
 
 .portfolio-grid > div:hover img{
-    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
 }
 
 /* contact */
@@ -205,8 +250,13 @@ h1, h2, h3{
     background-color: rgb(248, 248, 248);
 }
 .contact-content{
-    flex-direction: column;
-    align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
 }
 .contact-left{
     margin-bottom: 5rem;
@@ -224,6 +274,22 @@ h1, h2, h3{
     padding: 1rem;
     width: 100%;
 }
+.contact-left form .form-control::-webkit-input-placeholder{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-left form .form-control::-moz-placeholder{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-left form .form-control:-ms-input-placeholder{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-left form .form-control::-ms-input-placeholder{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
 .contact-left form .form-control::placeholder{
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
@@ -237,6 +303,8 @@ h1, h2, h3{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.6rem;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 .contact-left .btn-submit:hover{
@@ -244,6 +312,8 @@ h1, h2, h3{
 }
 
 #insta{
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.3))), url('../images/insta-pic.jpg') center/cover no-repeat fixed;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/insta-pic.jpg') center/cover no-repeat fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/insta-pic.jpg') center/cover no-repeat fixed;
     min-height: 65vh;
 }
@@ -256,14 +326,19 @@ h1, h2, h3{
 .insta-grid > div{
     height: 400px;
     overflow: hidden;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 .insta-grid > div img{
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .insta-grid > div:hover{
-    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
 }
 
 /* footer */
@@ -280,11 +355,16 @@ h1, h2, h3{
     letter-spacing: 1px;
 }
 .footer-content ul{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .footer-content ul li a{
     color: var(--light-color);
     font-size: 1.5rem;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
 .footer-content ul li a:hover{
@@ -315,8 +395,11 @@ h1, h2, h3{
     
 
     .work-bottom{
+        -ms-grid-columns: 1fr 3rem 1fr;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 3rem;
+        -webkit-column-gap: 3rem;
+           -moz-column-gap: 3rem;
+                column-gap: 3rem;
         row-gap: 0;
     }
 }
@@ -326,9 +409,11 @@ h1, h2, h3{
         font-size: 4rem;
     }
     .work-bottom{
+        -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     }
     .portfolio-grid{
+        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     }
     .portfolio-grid > div{
@@ -337,13 +422,17 @@ h1, h2, h3{
     }
     .portfolio-grid > div img{
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     .contact-left form .form-control{
         max-width: 500px;
     }
     .footer-content ul{
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
 
 }
@@ -353,15 +442,21 @@ h1, h2, h3{
         font-size: 6rem;
     }
     .about-content, .work-top{
+        -ms-grid-columns: 1fr 6rem 1fr;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 6rem;
+        -webkit-column-gap: 6rem;
+           -moz-column-gap: 6rem;
+                column-gap: 6rem;
         row-gap: 0;
     }
     .about-left{
         margin-bottom: 0;
     }
     .contact-content{
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     .contact-right{
         padding-left: 3rem;
@@ -371,12 +466,14 @@ h1, h2, h3{
         width: 50%;
     }
     .insta-grid{
+        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media(min-width: 992px){
     .insta-grid{
+        -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     }
     .insta-grid > div{
@@ -386,13 +483,17 @@ h1, h2, h3{
 
 @media(min-width: 1200px){
     .portfolio-grid{
+        -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     }
     .portfolio-grid > div:nth-child(2){
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 2;
         grid-column: 2 / 4;
     }
     .portfolio-grid > div:nth-child(6){
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-column: 1 / 3;
     }
 }
-
