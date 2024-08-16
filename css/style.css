@@ -76,13 +76,9 @@ h1, h2, h3{
 
 /* header */
 #header{
-<<<<<<< HEAD
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/cover1.jpeg')  no-repeat fixed;
     background-position: center;
     background-size: cover;
-=======
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/IMG-20240816-WA0068.jpg') center/cover no-repeat fixed;
->>>>>>> e7b5d3ae9e9ff4d83a404c1df1f0c0570d5fbb93
     justify-content: flex-start;
     align-items: flex-end;
 }
