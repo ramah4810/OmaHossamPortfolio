@@ -1,0 +1,85 @@
+.textBody {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/cover1.jpg') no-repeat center fixed;
+  text-align: center;
+}
+
+/* تصميم الشريط */
+#welcome-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* خلفية نصف شفافة */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  opacity: 0; /* إخفاء الشريط في البداية */
+  z-index: 9999; /* جعله فوق جميع العناصر */
+  transition: opacity 0.5s ease-in-out; /* انتقال سلس للظهور والإخفاء */
+}
+
+#welcome-banner h1{
+  font-size: 30px;
+  letter-spacing: 15px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+
+/* تأثير فلاش الكاميرا */
+.flash-effect {
+  animation: flash 1s ease-in-out 2; /* مدة الفلاش نصف ثانية ويتكرر مرتين */
+}
+
+/* فلاش الكاميرا */
+@keyframes flash {
+  0% {
+      background-color: white;
+      opacity: 1;
+  }
+  50% {
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 0.9;
+  }
+  70% {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+   }
+  100% {
+      background-color: white;
+      opacity: 1; 
+  }
+}
+
+
+.owl-carousel .item {
+  background: transparent;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.owl-carousel .owl-nav {
+  position: absolute; /* اجعل أزرار التنقل عائمة */
+  top: 50%; /* نقلها إلى الأعلى قبل الـ stage */
+  width: 96%; /* اجعل الأزرار تغطي العرض الكامل للـ stage */
+  display: flex;
+  justify-content: space-between; /* توزيع الأزرار في الاتجاهين */
+  z-index: 2; /* اجعل الأزرار تظهر فوق الـ stage */
+  color: antiquewhite;
+  font-size: 25px;
+}
+
+.owl-carousel .owl-stage {
+  position: relative; 
+  z-index: 1; 
+}
+
+
+
+
